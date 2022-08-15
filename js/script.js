@@ -43,7 +43,7 @@ signin.addEventListener("click", async (ev) => {
         errorspan.style.display = "block"
         setTimeout(()=>{
             errorspan.style.display = "none"
-        }, 2300)
+        }, 3000)
     } else {
         fetch(url, {
             method: "POST",
