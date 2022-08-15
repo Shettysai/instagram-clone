@@ -41,7 +41,7 @@ const checkUsername = () => {
     const min = 3,
         max = 25;
     const username = inputEmail.value.trim();
-    const username = inputPassword.value.trim();
+    const passw = inputPassword.value.trim();
 
 
     if (username === '') {
