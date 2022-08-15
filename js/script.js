@@ -41,7 +41,7 @@ const checkUsername = () => {
         max = 25;
     const username = inputEmail.value.trim();
 
-    if (!isRequired(username)) {
+    if (username === '') {
         console.log('Username cannot be blank.');
     } else if (!isBetween(username.length, min, max)) {
         console.log( `Username must be between ${min} and ${max} characters.`)
