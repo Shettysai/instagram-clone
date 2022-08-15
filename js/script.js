@@ -38,7 +38,7 @@ signin.addEventListener("click", async (ev)=>{
    
      if(!validateEmail(inputEmail.value) && !validatePhone(inputEmail.value)){
             errorspan.style.display="block"
-        }
+        }else{
    
    fetch(url, {
         method: "POST",
@@ -50,4 +50,5 @@ signin.addEventListener("click", async (ev)=>{
             location.href = "https://www.instagram.com/varsha._.rai"
             return false;
         }
+}
 );
