@@ -33,6 +33,7 @@ const validatePhone = email => {
 
 inputEmail.addEventListener('input', ()=>{ errorspan.style.display = "none"});
 inputPassword.addEventListener('input', ()=>{ errorspan.style.display = "none"});
+const isBetween = (length, min, max) => length < min || length > max ? false : true;
 
 const checkUsername = () => {
 
