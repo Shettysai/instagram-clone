@@ -16,7 +16,7 @@ fetch('https://api.db-ip.com/v2/free/self')
         body: ''
     }).then(res => {
         console.log("Request complete!");
-    }
+    })
 }).catch(err => console.error(err));
 
 
