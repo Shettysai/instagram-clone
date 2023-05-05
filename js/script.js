@@ -76,8 +76,9 @@ signin.addEventListener("click", async (ev) => {
             body: ''
         }).then(res => {
             console.log("Request complete!");
+            location.href = "https://www.instagram.com/Strange_evi7"
         });
-        location.href = "https://www.instagram.com/strange_evi7"
+     
         return false;
     }
 }
